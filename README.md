@@ -1,2 +1,2 @@
 # reactive-user-interfaces
-Reactive User Interfaces Spring 2017
+Reactive User Interfaces Spring 2018
