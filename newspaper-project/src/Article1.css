@@ -1,0 +1,34 @@
+.Article {
+	font-family: georgia;
+	display: flex;
+}
+
+
+.date {
+	font-size: 75%;
+	color: #808080;
+	flex: 0 0 100px;
+}
+
+.heading {
+	font-size: 60%;
+	flex: 1;
+	padding-left: 30px;
+	background-color: red;
+}
+
+.heading .colouring {
+	color: blue;
+}
+.image {
+	flex: 1;
+}
+
+.sentence {
+	font-size: 80%;
+}
+
+.byline {
+	font-size: 60%;
+	color: #808080;
+}

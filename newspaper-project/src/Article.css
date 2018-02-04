@@ -1,0 +1,38 @@
+.Article {
+	font-family: georgia;
+	display: flex;
+	border-bottom: solid;
+	border-color: #D3D3D3;
+}
+
+
+.date {
+	font-size: 75%;
+	color: #808080;
+	padding-top: 15px;
+	padding-left: 10px;
+	flex: 0 0 100px;
+}
+
+.heading {
+	font-size: 60%;
+	flex: 1;
+	padding-left: 30px;
+	
+}
+
+.heading .byline {
+	font-size: 100%;
+	color: #808080;
+}
+
+.heading .sentence {
+	font-size: 140%;
+}
+
+.image {
+	padding-left: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	flex: 1.5;
+}
