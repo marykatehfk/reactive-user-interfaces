@@ -1,0 +1,43 @@
+.Article {
+  display: flex;
+  width: 60%;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color:#E2E2E2;
+}
+
+.Article time {
+  color: #999;
+  font-size: 11px;
+  flex: 0 0 100px;
+  padding: 18px;
+}
+
+.Article .middle {
+  flex: 1
+}
+
+.Article h2 {
+  font-size: 17px;
+}
+
+.Article .description {
+  font-size: 13px;
+  line-height: 1.6em;
+}
+
+.Article .byline {
+  font-size: 11px;
+  color: #999;
+  padding-bottom: 5px;
+}
+
+.Article figure {
+  flex: 0 0 160px;
+  padding-top: 8px;
+  padding-left: 30px;
+}
+
+.Article figure img {
+  width: 100%;
+}
