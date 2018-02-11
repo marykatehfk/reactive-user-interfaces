@@ -1,0 +1,11 @@
+
+.Message p {
+  padding-left: 100px;
+  padding-top: 40px;
+  width: 600px;
+  height: 90px;
+  font-size: 32px;
+  background-color: #ededed;
+  color: #606060;
+  border-radius: 10px;
+}

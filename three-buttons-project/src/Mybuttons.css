@@ -1,0 +1,15 @@
+
+.Mybuttons {
+
+  width: 232px;
+  height: 60px;
+  font-size: 16px;
+  background-color: #fff;
+  border-color: #4d9696;
+  color: #4e8f8f;
+}
+
+.active {
+  background-color: #00adad;
+  color: #fff;
+}
