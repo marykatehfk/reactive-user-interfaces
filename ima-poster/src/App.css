@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  width: 800px;
+}
+
+.TextLeft {
+  flex: 1;
+}
+
+.PosterRight {
+  flex: 1;
+}
