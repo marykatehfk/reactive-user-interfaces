@@ -1,0 +1,39 @@
+.Contacts{
+  background: #ffffe0;
+  padding-left: 20px;
+  }
+
+.Contacts h1 {
+  color: #800000;
+}
+
+.Contacts #title {
+   padding-left: 20px;
+   font-weight: bold;
+   word-spacing: 1em;
+}
+
+.entry {
+  border-bottom: 1px #d3d3d3 solid;
+  padding: 10px;
+}
+
+.searching {
+ padding: 10px;
+}
+
+.text {
+  width: 95%;
+}
+
+.back {
+  font-weight:normal;
+  font-size: 13px;
+}
+
+.sortButton {
+  background-color: #fff;
+  border-color: 	#D2691E;
+  color: 	#D2691E;
+
+}

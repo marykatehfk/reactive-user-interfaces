@@ -1,0 +1,17 @@
+.Notes {
+  font-weight: bold;
+  background: #ffffe0;
+  padding: 10px;
+  padding-left: 25px;
+}
+
+.Notes .input {
+  width: 95%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.Notes .back {
+  font-weight:normal;
+  font-size: 13px;
+}
