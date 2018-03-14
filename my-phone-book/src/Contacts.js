@@ -13,8 +13,6 @@ class Contacts extends Component {
       alphabetical: 'no',
     };
     this.searchMe = this.searchMe.bind(this);
-  /*  this.sortAscending = this.sortAscending.bind(this);
-    this.sortDescending = this.sortDescending.bind(this); */
     this.showChina = this.showChina.bind(this);
     this.sortAlphabetical = this.sortAlphabetical.bind(this);
   }
@@ -23,18 +21,6 @@ class Contacts extends Component {
       searchMe: e.target.value
     })
   }
-
-/*  sortAscending () {
-    this.setState({
-      sort: 'asc'
-    })
-  }
-
-  sortDescending () {
-    this.setState({
-      sort: 'desc'
-    })
-  } */
 
   sortAlphabetical () {
     if(this.state.alphabetical === 'no') {
@@ -73,10 +59,6 @@ class Contacts extends Component {
     });
     }
 
-  /*  if (this.state.sort === 'desc') {
-      arrayCopy = arrayCopy.reverse();
-    } */
-
     if (this.state.alphabetical === 'yes') {
       arrayCopy = arrayCopy.sort((nameA, nameB) => nameA.name > nameB.name);
     }
@@ -108,7 +90,7 @@ class Contacts extends Component {
           <ChinaButton onClick={this.showChina} title="China" active={this.state.inChina === "China"} />
         </div>
         {book}
-        
+
       </div>
     );
   }

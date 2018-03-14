@@ -32,8 +32,8 @@ updateMemo (id, memo){
     c.id === id);
   //console.log(person);
   console.log(person.memo);
-  this.setState({
-     person : memo //or person.memo? a bit confused
+   this.setState({
+     person : memo //or person.memo? a bit confused about how to implement this.
   })
 
   // find the person
