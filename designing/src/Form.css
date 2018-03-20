@@ -1,0 +1,16 @@
+.Form input {
+  border-color: #19FFCB;
+  margin-right: 5px;
+  margin-top: 10px;
+  font-family: verdana;
+  font-size: 12px;
+  padding: 2px;
+}
+
+.Form button {
+  border-color: #19FFCB;
+  font-family: verdana;
+  font-size: 12px;
+  padding: 2px;
+  background-color: #19FFCB;
+}
