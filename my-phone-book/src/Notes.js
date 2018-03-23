@@ -5,12 +5,17 @@ import './Notes.css';
 class Notes extends Component {
   constructor(props){
   super(props)
+  this.state = {
+    text: ''
+  }
   this.newText = this.newText.bind(this);
   }
 
   newText (e) {
-    let memo = e.target.value;
-    this.props.onSave(this.props.contact.id, memo);
+    this.setState({
+      text: e.target.value
+    })
+    this.props.onSave(this.props.contact.id, this.state.text);
   }
 
   render() {

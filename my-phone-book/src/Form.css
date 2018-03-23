@@ -1,0 +1,23 @@
+.Form {
+  padding: 10px;
+  padding-left: 20px;
+  background: #ffffe0;
+
+}
+
+.inputs{
+  padding-left: 20px;
+}
+
+.text {
+  padding-left: 5px;
+  width: 90%;
+}
+
+.Form button {
+  background-color: #fff;
+  border-color: #ff4500;
+  color:	#D2691E;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}

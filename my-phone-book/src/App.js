@@ -4,6 +4,7 @@ import Contacts from './Contacts.js';
 import {Route, BrowserRouter as Router} from 'react-router-dom';
 import myHome from './myHome.js';
 import Notes from './Notes.js';
+import Form from './Form.js';
 
 
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     super(props)
     this.state = {
       contacts: [
-        {name: 'Mary Kate', address: '3680 Zhangyang Lu, Shanghai', phone: '86 18621001595', email: 'marykate@nyu.edu', id:'marykate', memo:"hello"},
+        {name: 'Mary Kate', address: '3680 Zhangyang Lu, Shanghai', phone: '86 18621001595', email: 'marykate@nyu.edu', id:'marykate', memo:""},
         {name: 'Nora', address: 'Fanciest villa in the Amazon Rainforest, Peru', phone: '86 27384938293', email: 'nora@nyu.edu', id:'nora', memo:""},
         {name: 'Leidy', address: 'Shanghai, China', phone: '86 28374949222', email: 'leidy@nyu.edu', id:'leidy', memo:""},
         {name: 'Haitian', address: 'Suzhou, China', phone: '86 185384849400', email: 'haitian@nyu.edu', id:'haitian', memo:""},
@@ -24,20 +25,57 @@ class App extends Component {
       ]
     };
     this.updateMemo = this.updateMemo.bind(this);
-}
+    this.addNewContact = this.addNewContact.bind(this);
 
-updateMemo (id, memo){
-  //console.log(id, memo);
-  let person = this.state.contacts.find(c =>
-    c.id === id);
-  //console.log(person);
-  console.log(person.memo);
-   this.setState({
-     person : memo //or person.memo? a bit confused about how to implement this.
-  })
+    const stringState = localStorage.getItem('contactsData');
+    if (stringState) {
+      this.state = JSON.parse(stringState);
+    }
+  }
+
+updateMemo (id, text){
+
+  const index =  this.state.contacts.findIndex(c =>
+    c.id === id)
+
+  let myCopy = this.state.contacts.slice();
+  let personCopy = Object.assign({}, myCopy[index]);
+  personCopy.memo = text;
+  myCopy[index] = personCopy;
+  // update person in myCopy
+
+//myCopy[index] = Object.assign(person, { memo: text });
+  //make a copy of the person and assign the memo to be text
+
+    this.setState({
+      contacts: myCopy
+    })
+  //onsole.log(myCopy);
+
 
   // find the person
   // setstate to update person with memo
+}
+
+addNewContact(name, address, phone, email, id) {
+  //const myCopy = this.props.contacts.slice();
+  //console.log(myCopy);
+  const myCopy = this.state.contacts.slice();
+    myCopy.push({
+      name: name,
+      address: address,
+      phone: phone,
+      email: email,
+      id: name,
+    });
+    this.setState({
+      contacts: myCopy
+    });
+  //  console.log(myCopy);
+  }
+
+componentDidUpdate() {
+  localStorage.setItem('contactsData', JSON.stringify(this.state));
 }
 
   render() {
@@ -48,7 +86,14 @@ updateMemo (id, memo){
         <Route exact path="/" component={myHome} />
           <Route exact path="/components" render={props => {
           return <Contacts contacts={this.state.contacts}/>;
+
         }} />
+
+          <Route exact path="/components" render={props => {
+          const addContact = this.state.contacts.slice();
+          return <Form myCopy={addContact} onSave={this.addNewContact}/>
+        }} />
+
         <Route exact path="/notes/:id" render={props => {
           const note = this.state.contacts.find(contact =>
             props.match.params.id === contact.id

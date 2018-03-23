@@ -3,6 +3,7 @@ import './Contacts.css';
 import { Link } from 'react-router-dom';
 import ChinaButton from './ChinaButton.js';
 
+
 class Contacts extends Component {
   constructor(props) {
     super(props)
@@ -15,6 +16,7 @@ class Contacts extends Component {
     this.searchMe = this.searchMe.bind(this);
     this.showChina = this.showChina.bind(this);
     this.sortAlphabetical = this.sortAlphabetical.bind(this);
+
   }
   searchMe (e) {
     this.setState({
@@ -46,6 +48,7 @@ class Contacts extends Component {
     }
   }
 
+
   render() {
     let arrayCopy = this.props.contacts.slice();
 
@@ -73,9 +76,10 @@ class Contacts extends Component {
       return(
         <div className="entry" key = {contact.id}>
           <h1>{contact.name}</h1>
-          <p> <span id="title">address </span>{contact.address}</p>
-          <p> <span id="title">phone </span>{contact.phone}</p>
-          <p> <span id="title">email </span>{contact.email}</p>
+          <p> <span className="title">address </span>{contact.address}</p>
+          <p> <span className="title">phone </span>{contact.phone}</p>
+          <p> <span className="title">email </span>{contact.email}</p>
+          <p> <span className="title">memo </span>{contact.memo}</p>
           <Link to={'/notes/' + contact.id} className="back">memo</Link>
         </div>
       )
@@ -89,6 +93,7 @@ class Contacts extends Component {
           <button className="sortButton" onClick={this.sortAlphabetical}> A to Z </button>
           <ChinaButton onClick={this.showChina} title="China" active={this.state.inChina === "China"} />
         </div>
+
         {book}
 
       </div>

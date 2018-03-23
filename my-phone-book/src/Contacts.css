@@ -7,7 +7,7 @@
   color: #800000;
 }
 
-.Contacts #title {
+.Contacts .title {
    padding-left: 20px;
    font-weight: bold;
    word-spacing: 1em;
