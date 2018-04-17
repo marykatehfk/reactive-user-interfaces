@@ -1,0 +1,26 @@
+
+
+.profile {
+  display: grid;
+  grid-template-columns: 40px 50px auto;
+  grid-template-rows: 25% 100px auto;
+}
+
+.pic {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  max-width: 100%;
+}
+
+.name {
+  font-size: 50px;
+  font-family: verdana;
+  grid-column: 3/5;
+}
+
+.fact {
+  font-size: 15px;
+  font-family: monospace;
+  grid-column: 3/5;
+  grid-row: 3/5;
+}

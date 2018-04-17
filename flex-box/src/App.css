@@ -1,0 +1,30 @@
+header {
+  background-color: green;
+  }
+
+
+.wrapper {
+  display: flex;
+}
+
+aside {
+  background-color: blue;
+  flex: 0 0 100px;
+  display:none;
+}
+
+main {
+  background-color: red;
+  flex: 1;
+}
+
+@media (min-width: 500px) {
+  header {
+    padding: 30px;
+  }
+
+  aside {
+    display: block;
+  }
+
+}

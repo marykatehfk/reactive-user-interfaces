@@ -1,0 +1,38 @@
+button {
+  background-color: pink;
+  width: 260px;
+  height: 50px;
+  font-weight: bold;
+  font-family: georgia;
+}
+
+@keyframes showMenu {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 100px;
+  }
+}
+
+.box {
+  height: 100px;
+  background-color: cyan;
+  padding: 30px;
+  width: 200px;
+}
+
+.box-enter {
+  animation-name: showMenu;
+  animation-duration: 0.5s;
+}
+
+.box-exit {
+  animation-name: showMenu;
+  animation-duration: 0.5s;
+  animation-direction: reverse;
+}

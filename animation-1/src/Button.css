@@ -1,0 +1,21 @@
+@keyframes fromRedtoGreen {
+  0% {
+    background-color: red
+  }
+
+  50% {
+    background-color: green
+  }
+  100% {
+    background-color: red
+  }
+}
+
+.Button {
+  background-color: red
+}
+
+.animating {
+  animation-name: fromRedtoGreen;
+  background-color: green
+}
