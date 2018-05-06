@@ -1,0 +1,46 @@
+.Homepage {
+  padding-left: 30px;
+  font-family: cursive;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+
+@keyframes jiggle {
+
+  0% {
+    transform: none;
+  }
+
+  50% {
+    transform: rotate(0.5turn);
+  }
+
+  100% {
+    transform: none;
+  }
+
+}
+.sun {
+  width: 10%;
+  height: 10%;
+}
+
+.animation {
+  animation-name: jiggle;
+  animation-duration: 2s;
+}
+
+button {
+  margin-left: 10px;
+  font-family: cursive;
+  font-size: 15px;
+  border: none;
+  border-radius: 0.5em;
+  color: #4E5D99;
+
+}
+
+button:focus {
+  outline:none;
+}

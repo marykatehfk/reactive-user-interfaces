@@ -3,30 +3,25 @@ import './Fact.css';
 import Eating from './eating.jpg';
 
 class Facts extends Component {
-
+  // constructor(props) {
+  //   super(props)
+  // };
 
   render() {
-    let arrayCopy = this.props.aiyis.slice();
-
-    const facts = arrayCopy.map(fact  => {
-      return(
-        <div key = {fact.id} className="profile">
-          <img alt="Eating" src={Eating} className="pic" />
-          <p className="name"> {fact.name}</p>
-          <div className="fact">
-          <p > Birthday: {fact.bday}</p>
-          <p > Favourite Food: {fact.favfood}</p>
-          <p > Cannot Live Without: {fact.without}</p>
-          <p > Best Day: {fact.bestday}</p>
-          <p > Never Give Me: {fact.never}</p>
-          </div>
-        </div>
-      )
-    });
 
     return (
-      <div className="Facts">
-      {facts}
+      //Use the aiyi prop and find the facts in the array of aiyi objects.
+      <div className="profile">
+
+        <img alt="Eating" src={Eating} className="pic" />
+        <p className="name"> {this.props.aiyi.name}</p>
+        <div className="fact">
+          <p > Birthday: {this.props.aiyi.bday}</p>
+          <p > Favourite Food: {this.props.aiyi.favfood}</p>
+          <p > Cannot Live Without: {this.props.aiyi.without}</p>
+          <p > Best Day: {this.props.aiyi.bestday}</p>
+          <p > Never Give Me: {this.props.aiyi.never}</p>
+        </div>
 
       </div>
     );

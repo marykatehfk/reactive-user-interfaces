@@ -1,0 +1,36 @@
+.App {
+  display: flex;
+}
+
+.menu {
+  flex: 0 0 200px;
+  order:0;
+  font-family: cursive;
+  font-size: 20px;
+  background-color: #E4F4FA;
+  padding: 10px;
+  text-align: center;
+  line-height: 2em;
+  max-height: 100%;
+  border-radius: 0.5em;
+}
+
+.main {
+  flex: 1;
+}
+
+.active {
+  color: #FFF4E9;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #B26F6F;
+}

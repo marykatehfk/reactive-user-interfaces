@@ -1,0 +1,29 @@
+.Infos {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: cursive;
+  font-size: 15px;
+  line-height: 40px;
+  text-align: justify;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+
+h4 {
+  color: #3B464F;
+}
+
+p {
+  color: #3B464F;
+}
+
+.back {
+  font-size: 12px;
+  color: black;
+}
+
+.title {
+  text-align: center;
+  color: #FFA99B;
+  font-weight: bold;
+}

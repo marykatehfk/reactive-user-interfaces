@@ -58,7 +58,7 @@ class Questions extends Component {
         <label> {this.props.Qlabel}
           <input type="text" onChange={this.questionInput} />
         </label>
-        <button onClick={this.postQ}> Submit! </button>
+        <button className="submitButton" onClick={this.postQ}> Submit! </button>
         {Qlist}
       </div>
     );

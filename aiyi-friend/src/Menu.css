@@ -1,0 +1,22 @@
+.Menu {
+  font-family: cursive;
+  font-size: 20px;
+  border-bottom-color: 1px grey;
+  background-color: #E4F4FA;
+  padding: 10px;
+  text-align: center;
+
+}
+
+.floorButton {
+  font-family: cursive;
+  background-color: #E4F4FA;
+  width: 100%;
+  padding: 10px;
+  border: none;
+
+}
+
+.active {
+  background-color: #FFF4E9;
+}
